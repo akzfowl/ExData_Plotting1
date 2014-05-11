@@ -1,0 +1,11 @@
+
+png(filename = "plot4.png", width = 480, height = 480)
+par(mfcol=c(2,2))
+plot(hh$ST,hh$Global_active_power,pch=".",type="l",ylab="Global Active Power", xlab="")
+plot(hh$ST,hh$Sub_metering_1,col='black',type="l",ylab="Energy sub metering", xlab="")
+points(hh$ST,hh$Sub_metering_2,col='red',type="l")
+points(hh$ST,hh$Sub_metering_3,col='blue',type="l")
+legend("topright", lwd=1, col=c("black","red","blue"), bty = "n", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+plot(hh$ST,hh$Voltage,pch=".",type="l",ylab="Voltage", xlab="daytime")
+plot(hh$ST,hh$Global_reactive_power ,pch=".",type="l",ylab="Global_reactive_power ", xlab="daytime")
+dev.off()
